@@ -1,0 +1,37 @@
+{
+  "name": "gh-pr-filters-extension",
+  "version": "0.1.0",
+  "description": "Brave/Chromium extension that filters GitHub PR files by CODEOWNERS owner and viewed state.",
+  "scripts": {
+    "build": "node build.mjs",
+    "dev": "node build.mjs --watch",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "check": "pnpm typecheck && pnpm test && pnpm build"
+  },
+  "keywords": [
+    "github",
+    "pull-request",
+    "codeowners",
+    "chrome-extension"
+  ],
+  "author": "Sergio Mancilla",
+  "license": "MIT",
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "12.23.0",
+      "onFail": "download"
+    }
+  },
+  "packageManager": "pnpm@12.23.0",
+  "type": "module",
+  "devDependencies": {
+    "@types/chrome": "^0.3.7",
+    "esbuild": "^0.28.2",
+    "jsdom": "^31.0.1",
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.1"
+  },
+  "private": true
+}
