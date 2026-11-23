@@ -9,10 +9,21 @@ It reads the CODEOWNERS shield GitHub already renders in each file header, so it
 
 ## Install (unpacked)
 
+Requirements: [Git](https://git-scm.com/), [Node.js](https://nodejs.org/) 22+ and [pnpm](https://pnpm.io/installation).
+
+Clone the repository and build the extension:
+
 ```sh
+git clone https://github.com/athomserx/gh-pr-filters-extension.git
+# or, with the GitHub CLI: gh repo clone athomserx/gh-pr-filters-extension
+cd gh-pr-filters-extension
 pnpm install
 pnpm build
 ```
+
+The build output goes to `dist/`. To update later, run `git pull && pnpm install && pnpm build` and reload the extension.
+
+Then load it in the browser:
 
 1. Open `brave://extensions` (or `chrome://extensions`).
 2. Enable **Developer mode**.
